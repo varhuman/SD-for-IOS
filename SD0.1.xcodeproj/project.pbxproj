@@ -14,6 +14,22 @@
 		3D32CE0C29C1E87600EF6E0F /* SD0_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE0B29C1E87600EF6E0F /* SD0_1Tests.swift */; };
 		3D32CE1629C1E87600EF6E0F /* SD0_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE1529C1E87600EF6E0F /* SD0_1UITests.swift */; };
 		3D32CE1829C1E87600EF6E0F /* SD0_1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE1729C1E87600EF6E0F /* SD0_1UITestsLaunchTests.swift */; };
+		3D32CE2529C1E9C600EF6E0F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE2429C1E9C600EF6E0F /* NetworkManager.swift */; };
+		3D32CE2729C1FC7900EF6E0F /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE2629C1FC7900EF6E0F /* AlertView.swift */; };
+		3D32CE2929C1FCD900EF6E0F /* ResultPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE2829C1FCD900EF6E0F /* ResultPage.swift */; };
+		3D32CE2B29C20E1400EF6E0F /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE2A29C20E1400EF6E0F /* CustomNavigationBar.swift */; };
+		3D32CE2D29C230B700EF6E0F /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE2C29C230B700EF6E0F /* AppViewModel.swift */; };
+		3D32CE2F29C48AC700EF6E0F /* BottomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE2E29C48AC700EF6E0F /* BottomTabBar.swift */; };
+		3D32CE3329C48BBA00EF6E0F /* HistoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE3229C48BBA00EF6E0F /* HistoryPage.swift */; };
+		3D32CE3529C48CA900EF6E0F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE3429C48CA900EF6E0F /* MainView.swift */; };
+		3D32CE3729C48CCC00EF6E0F /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE3629C48CCC00EF6E0F /* AppData.swift */; };
+		3D32CE3929C4951F00EF6E0F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE3829C4951F00EF6E0F /* Utils.swift */; };
+		3D32CE3B29C4962200EF6E0F /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE3A29C4962200EF6E0F /* ServerResponse.swift */; };
+		3D32CE3E29C4C68800EF6E0F /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3D32CE3D29C4C68800EF6E0F /* SwiftyJSON */; };
+		3D32CE4129C4D2E700EF6E0F /* AnyCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 3D32CE4029C4D2E700EF6E0F /* AnyCodable */; };
+		3D32CE4529C57A0D00EF6E0F /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE4429C57A0C00EF6E0F /* ToastView.swift */; };
+		3D32CE4929C5836D00EF6E0F /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE4829C5836D00EF6E0F /* NetworkUtils.swift */; };
+		3D32CE4B29C58A5D00EF6E0F /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE4A29C58A5D00EF6E0F /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +60,20 @@
 		3D32CE1129C1E87600EF6E0F /* SD0.1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SD0.1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D32CE1529C1E87600EF6E0F /* SD0_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SD0_1UITests.swift; sourceTree = "<group>"; };
 		3D32CE1729C1E87600EF6E0F /* SD0_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SD0_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3D32CE2429C1E9C600EF6E0F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3D32CE2629C1FC7900EF6E0F /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		3D32CE2829C1FCD900EF6E0F /* ResultPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPage.swift; sourceTree = "<group>"; };
+		3D32CE2A29C20E1400EF6E0F /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		3D32CE2C29C230B700EF6E0F /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		3D32CE2E29C48AC700EF6E0F /* BottomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBar.swift; sourceTree = "<group>"; };
+		3D32CE3229C48BBA00EF6E0F /* HistoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPage.swift; sourceTree = "<group>"; };
+		3D32CE3429C48CA900EF6E0F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3D32CE3629C48CCC00EF6E0F /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		3D32CE3829C4951F00EF6E0F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		3D32CE3A29C4962200EF6E0F /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		3D32CE4429C57A0C00EF6E0F /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		3D32CE4829C5836D00EF6E0F /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
+		3D32CE4A29C58A5D00EF6E0F /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D32CE4129C4D2E700EF6E0F /* AnyCodable in Frameworks */,
+				3D32CE3E29C4C68800EF6E0F /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +106,8 @@
 		3D32CDEE29C1E87500EF6E0F = {
 			isa = PBXGroup;
 			children = (
+				3D32CE4A29C58A5D00EF6E0F /* SwiftUIView.swift */,
+				3D32CE4829C5836D00EF6E0F /* NetworkUtils.swift */,
 				3D32CDF929C1E87500EF6E0F /* SD0.1 */,
 				3D32CE0A29C1E87600EF6E0F /* SD0.1Tests */,
 				3D32CE1429C1E87600EF6E0F /* SD0.1UITests */,
@@ -94,10 +128,22 @@
 		3D32CDF929C1E87500EF6E0F /* SD0.1 */ = {
 			isa = PBXGroup;
 			children = (
+				3D32CE4429C57A0C00EF6E0F /* ToastView.swift */,
+				3D32CE3429C48CA900EF6E0F /* MainView.swift */,
+				3D32CE3629C48CCC00EF6E0F /* AppData.swift */,
+				3D32CE2E29C48AC700EF6E0F /* BottomTabBar.swift */,
+				3D32CE3229C48BBA00EF6E0F /* HistoryPage.swift */,
+				3D32CE2C29C230B700EF6E0F /* AppViewModel.swift */,
+				3D32CE2A29C20E1400EF6E0F /* CustomNavigationBar.swift */,
+				3D32CE2829C1FCD900EF6E0F /* ResultPage.swift */,
+				3D32CE2629C1FC7900EF6E0F /* AlertView.swift */,
 				3D32CDFA29C1E87500EF6E0F /* SD0_1App.swift */,
 				3D32CDFC29C1E87500EF6E0F /* ContentView.swift */,
+				3D32CE3A29C4962200EF6E0F /* ServerResponse.swift */,
+				3D32CE3829C4951F00EF6E0F /* Utils.swift */,
 				3D32CDFE29C1E87500EF6E0F /* Assets.xcassets */,
 				3D32CE0029C1E87500EF6E0F /* Preview Content */,
+				3D32CE2429C1E9C600EF6E0F /* NetworkManager.swift */,
 			);
 			path = SD0.1;
 			sourceTree = "<group>";
@@ -143,6 +189,10 @@
 			dependencies = (
 			);
 			name = SD0.1;
+			packageProductDependencies = (
+				3D32CE3D29C4C68800EF6E0F /* SwiftyJSON */,
+				3D32CE4029C4D2E700EF6E0F /* AnyCodable */,
+			);
 			productName = SD0.1;
 			productReference = 3D32CDF729C1E87500EF6E0F /* SD0.1.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +265,10 @@
 				Base,
 			);
 			mainGroup = 3D32CDEE29C1E87500EF6E0F;
+			packageReferences = (
+				3D32CE3C29C4C68800EF6E0F /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				3D32CE3F29C4D2E700EF6E0F /* XCRemoteSwiftPackageReference "AnyCodable" */,
+			);
 			productRefGroup = 3D32CDF829C1E87500EF6E0F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +311,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D32CE2B29C20E1400EF6E0F /* CustomNavigationBar.swift in Sources */,
+				3D32CE2529C1E9C600EF6E0F /* NetworkManager.swift in Sources */,
+				3D32CE4B29C58A5D00EF6E0F /* SwiftUIView.swift in Sources */,
+				3D32CE2D29C230B700EF6E0F /* AppViewModel.swift in Sources */,
+				3D32CE3B29C4962200EF6E0F /* ServerResponse.swift in Sources */,
+				3D32CE4529C57A0D00EF6E0F /* ToastView.swift in Sources */,
+				3D32CE4929C5836D00EF6E0F /* NetworkUtils.swift in Sources */,
+				3D32CE3529C48CA900EF6E0F /* MainView.swift in Sources */,
+				3D32CE3729C48CCC00EF6E0F /* AppData.swift in Sources */,
+				3D32CE2729C1FC7900EF6E0F /* AlertView.swift in Sources */,
+				3D32CE2929C1FCD900EF6E0F /* ResultPage.swift in Sources */,
 				3D32CDFD29C1E87500EF6E0F /* ContentView.swift in Sources */,
+				3D32CE3329C48BBA00EF6E0F /* HistoryPage.swift in Sources */,
+				3D32CE2F29C48AC700EF6E0F /* BottomTabBar.swift in Sources */,
 				3D32CDFB29C1E87500EF6E0F /* SD0_1App.swift in Sources */,
+				3D32CE3929C4951F00EF6E0F /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +488,7 @@
 				DEVELOPMENT_TEAM = NY895LXZ8G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "需要访问您的照片库以保存生成的图像。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +518,7 @@
 				DEVELOPMENT_TEAM = NY895LXZ8G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "需要访问您的照片库以保存生成的图像。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -583,6 +653,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D32CE3C29C4C68800EF6E0F /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		3D32CE3F29C4D2E700EF6E0F /* XCRemoteSwiftPackageReference "AnyCodable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flight-School/AnyCodable";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D32CE3D29C4C68800EF6E0F /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D32CE3C29C4C68800EF6E0F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		3D32CE4029C4D2E700EF6E0F /* AnyCodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D32CE3F29C4D2E700EF6E0F /* XCRemoteSwiftPackageReference "AnyCodable" */;
+			productName = AnyCodable;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3D32CDEF29C1E87500EF6E0F /* Project object */;
 }
