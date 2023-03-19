@@ -30,6 +30,10 @@
 		3D32CE4529C57A0D00EF6E0F /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE4429C57A0C00EF6E0F /* ToastView.swift */; };
 		3D32CE4929C5836D00EF6E0F /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE4829C5836D00EF6E0F /* NetworkUtils.swift */; };
 		3D32CE4B29C58A5D00EF6E0F /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE4A29C58A5D00EF6E0F /* SwiftUIView.swift */; };
+		3D32CE4E29C6FCB600EF6E0F /* contentViewData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE4C29C6FCB600EF6E0F /* contentViewData.xcdatamodeld */; };
+		3D32CE5829C7020F00EF6E0F /* CoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE5729C7020F00EF6E0F /* CoreDataUtils.swift */; };
+		3DEBE0CF29C75737004CF958 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 3DEBE0CE29C75737004CF958 /* SwiftUIX */; };
+		3DEBE0D329C75792004CF958 /* NormalContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBE0D229C75792004CF958 /* NormalContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +78,9 @@
 		3D32CE4429C57A0C00EF6E0F /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		3D32CE4829C5836D00EF6E0F /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		3D32CE4A29C58A5D00EF6E0F /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		3D32CE4D29C6FCB600EF6E0F /* contentViewData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = contentViewData.xcdatamodel; sourceTree = "<group>"; };
+		3D32CE5729C7020F00EF6E0F /* CoreDataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUtils.swift; sourceTree = "<group>"; };
+		3DEBE0D229C75792004CF958 /* NormalContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DEBE0CF29C75737004CF958 /* SwiftUIX in Frameworks */,
 				3D32CE4129C4D2E700EF6E0F /* AnyCodable in Frameworks */,
 				3D32CE3E29C4C68800EF6E0F /* SwiftyJSON in Frameworks */,
 			);
@@ -106,6 +114,9 @@
 		3D32CDEE29C1E87500EF6E0F = {
 			isa = PBXGroup;
 			children = (
+				3DEBE0D229C75792004CF958 /* NormalContainer.swift */,
+				3D32CE5729C7020F00EF6E0F /* CoreDataUtils.swift */,
+				3D32CE4C29C6FCB600EF6E0F /* contentViewData.xcdatamodeld */,
 				3D32CE4A29C58A5D00EF6E0F /* SwiftUIView.swift */,
 				3D32CE4829C5836D00EF6E0F /* NetworkUtils.swift */,
 				3D32CDF929C1E87500EF6E0F /* SD0.1 */,
@@ -192,6 +203,7 @@
 			packageProductDependencies = (
 				3D32CE3D29C4C68800EF6E0F /* SwiftyJSON */,
 				3D32CE4029C4D2E700EF6E0F /* AnyCodable */,
+				3DEBE0CE29C75737004CF958 /* SwiftUIX */,
 			);
 			productName = SD0.1;
 			productReference = 3D32CDF729C1E87500EF6E0F /* SD0.1.app */;
@@ -268,6 +280,7 @@
 			packageReferences = (
 				3D32CE3C29C4C68800EF6E0F /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				3D32CE3F29C4D2E700EF6E0F /* XCRemoteSwiftPackageReference "AnyCodable" */,
+				3DEBE0CD29C75737004CF958 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 			);
 			productRefGroup = 3D32CDF829C1E87500EF6E0F /* Products */;
 			projectDirPath = "";
@@ -313,8 +326,10 @@
 			files = (
 				3D32CE2B29C20E1400EF6E0F /* CustomNavigationBar.swift in Sources */,
 				3D32CE2529C1E9C600EF6E0F /* NetworkManager.swift in Sources */,
+				3DEBE0D329C75792004CF958 /* NormalContainer.swift in Sources */,
 				3D32CE4B29C58A5D00EF6E0F /* SwiftUIView.swift in Sources */,
 				3D32CE2D29C230B700EF6E0F /* AppViewModel.swift in Sources */,
+				3D32CE4E29C6FCB600EF6E0F /* contentViewData.xcdatamodeld in Sources */,
 				3D32CE3B29C4962200EF6E0F /* ServerResponse.swift in Sources */,
 				3D32CE4529C57A0D00EF6E0F /* ToastView.swift in Sources */,
 				3D32CE4929C5836D00EF6E0F /* NetworkUtils.swift in Sources */,
@@ -323,6 +338,7 @@
 				3D32CE2729C1FC7900EF6E0F /* AlertView.swift in Sources */,
 				3D32CE2929C1FCD900EF6E0F /* ResultPage.swift in Sources */,
 				3D32CDFD29C1E87500EF6E0F /* ContentView.swift in Sources */,
+				3D32CE5829C7020F00EF6E0F /* CoreDataUtils.swift in Sources */,
 				3D32CE3329C48BBA00EF6E0F /* HistoryPage.swift in Sources */,
 				3D32CE2F29C48AC700EF6E0F /* BottomTabBar.swift in Sources */,
 				3D32CDFB29C1E87500EF6E0F /* SD0_1App.swift in Sources */,
@@ -671,6 +687,14 @@
 				minimumVersion = 0.6.7;
 			};
 		};
+		3DEBE0CD29C75737004CF958 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -684,7 +708,26 @@
 			package = 3D32CE3F29C4D2E700EF6E0F /* XCRemoteSwiftPackageReference "AnyCodable" */;
 			productName = AnyCodable;
 		};
+		3DEBE0CE29C75737004CF958 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DEBE0CD29C75737004CF958 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		3D32CE4C29C6FCB600EF6E0F /* contentViewData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3D32CE4D29C6FCB600EF6E0F /* contentViewData.xcdatamodel */,
+			);
+			currentVersion = 3D32CE4D29C6FCB600EF6E0F /* contentViewData.xcdatamodel */;
+			name = contentViewData.xcdatamodeld;
+			path = "../../../../Library/Developer/Xcode/DerivedData/SD0.1-eyqxwucyyydfukbxqeuuktwhqfrv/SourcePackages/checkouts/AnyCodable/contentViewData.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3D32CDEF29C1E87500EF6E0F /* Project object */;
 }

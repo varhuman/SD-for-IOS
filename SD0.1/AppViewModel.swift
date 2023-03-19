@@ -10,10 +10,93 @@ import Combine
 
 class AppViewModel: ObservableObject {
     static let viewModel = AppViewModel()
+    @Published var inputText: String = ""
+    private var cancellable: AnyCancellable?
+    
+    let saveSettingsSubject = PassthroughSubject<Void, Never>()
+    let saveLoraSetting = PassthroughSubject<Void, Never>()
+    private var cancellables = Set<AnyCancellable>()
 
+    @Published var selectedSamplerIndex: Int = 0
+    @Published var steps: Int = 50
+    @Published var seed: Int = -1
+    @Published var batch_size: Int = 1
+    @Published var faceRestore: Bool = false
+    @Published var width: Int = 512
+    @Published var height: Int = 512
+    @Published var promptTextInput = ""
+    @Published var negativeTextInput = ""
+    @Published var selectedModelIndex = 0
+    @Published var isAdditionNetworkChecked = false
+    
+    @Published var loraWeights: [Float] = Array(repeating: 0, count: 5)
+    @Published var selectedLoraOptions: [Int] = Array(repeating: 0, count: 5)
+    @Published var loraIsEnableds: [Bool] = Array(repeating: false, count: 5)
+    
+    @Published var loraModels: LoraModelsResponse = LoraModelsResponse(list: [])
     @Published var modelTitles: [String] = []
     @Published var modelItems: [ModelItem] = []
-    @Published var loraModels: LoraModelsResponse = LoraModelsResponse(list: [])
+    
+    init() {
+        Publishers.MergeMany(
+            $selectedSamplerIndex,
+            $steps,
+            $seed,
+            $batch_size,
+            $width,
+            $height,
+            $selectedModelIndex
+        )
+        .sink { [weak self] _ in
+            self?.saveSettingsSubject.send()
+        }
+        .store(in: &cancellables)
+        
+        Publishers.MergeMany($isAdditionNetworkChecked, $faceRestore)
+            .sink { [weak self] _ in
+                self?.saveSettingsSubject.send()
+            }
+            .store(in: &cancellables)
+        
+        Publishers.MergeMany($promptTextInput,
+                             $negativeTextInput)
+            .sink { [weak self] _ in
+                self?.saveSettingsSubject.send()
+            }
+            .store(in: &cancellables)
+        
+        $loraWeights
+            .sink { [weak self] _ in
+                self?.saveLoraSetting.send()
+            }
+            .store(in: &cancellables)
+        
+        $selectedLoraOptions
+            .sink { [weak self] _ in
+                self?.saveLoraSetting.send()
+            }
+            .store(in: &cancellables)
+        
+        $loraIsEnableds
+            .sink { [weak self] _ in
+                self?.saveLoraSetting.send()
+            }
+            .store(in: &cancellables)
+        
+        saveSettingsSubject
+        .debounce(for: .seconds(1), scheduler: DispatchQueue.main) // Adjust the debounce time interval as needed
+        .sink {
+            CoreDataUtils.share.saveForContentViewData()
+        }
+        .store(in: &cancellables)
+        
+        saveLoraSetting
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.main) // Adjust the debounce time interval as needed
+            .sink {
+                CoreDataUtils.share.saveForLoraData()
+            }
+            .store(in: &cancellables)
+    }
     
     func fetchModelOptions(completion: @escaping (Bool, String) -> Void) {
         NetworkManager.shared.getModelRequest { result in

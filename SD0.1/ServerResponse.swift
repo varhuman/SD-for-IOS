@@ -19,6 +19,26 @@ struct ModelItem: Codable {
     let config: String?
 }
 
+let samplerOptions: [SamplerIndex] = [
+    .EulerA,
+    .Euler,
+    .LMS,
+    .Heun,
+    .DPM2,
+    .DPM2A,
+    .DPMPP2SA,
+    .DPMPP2M,
+    .DPMPPSDE,
+    .DPMFast,
+    .DPMAdaptive,
+    .LMSKarras,
+    .DPM2Karras,
+    .DPM2AKarras,
+    .DPMPP2SAKarras,
+    .DPMPP2MKarras,
+    .DPMPPSDEKarras
+]
+
 struct OptionsResponse: Codable {
     let sd_model_checkpoint: String
 }
@@ -43,6 +63,25 @@ enum SamplerIndex: String {
     case DPMPPSDEKarras = "DPM++ SDE Karras"
 }
 
+let samplers_k_diffusion = [
+    SamplerIndex.EulerA,
+    SamplerIndex.Euler,
+    SamplerIndex.LMS,
+    SamplerIndex.Heun,
+    SamplerIndex.DPM2,
+    SamplerIndex.DPM2A,
+    SamplerIndex.DPMPP2SA,
+    SamplerIndex.DPMPP2M,
+    SamplerIndex.DPMPPSDE,
+    SamplerIndex.DPMFast,
+    SamplerIndex.DPMAdaptive,
+    SamplerIndex.LMSKarras,
+    SamplerIndex.DPM2Karras,
+    SamplerIndex.DPM2AKarras,
+    SamplerIndex.DPMPP2SAKarras,
+    SamplerIndex.DPMPP2MKarras,
+    SamplerIndex.DPMPPSDEKarras,
+]
 extension SamplerIndex: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
@@ -83,7 +122,12 @@ struct txt2ImgRequestBody: Codable {
     var prompt: String = "A Girl, laying sofa"
     var negative_prompt: String = "low quality, nsfw"
     var styles: [String] = ["string"]
-    var override_settings: [String: String] = ["sd_model_checkpoint": "wlop-any.ckpt [7331f3bc87]"]
+    var override_settings: OverrideSettings = OverrideSettings()
+    
+    struct OverrideSettings: Codable {
+        var sd_model_checkpoint: String = "AsiaFacemix-pruned-fix.safetensors [75230c2f99]"
+    }
+    
     var seed: Int = -1
     var subseed: Int = -1
     var subseed_strength: Int = 0
@@ -125,10 +169,12 @@ struct txt2ImgRequestBody: Codable {
             
             // 遍历数组并依次添加值
             for index in 0..<loras.count {
-                script_args.arrayObject?.append(enableds[index])
-                script_args.arrayObject?.append(loras[index])
-                script_args.arrayObject?.append(weights[index])
-                script_args.arrayObject?.append(weights[index])
+                if enableds[index] {
+                    script_args.arrayObject?.append("LoRA")
+                    script_args.arrayObject?.append(loras[index])
+                    script_args.arrayObject?.append(weights[index])
+                    script_args.arrayObject?.append(weights[index])
+                }
             }
         }
     }
@@ -183,24 +229,4 @@ struct txt2ImgResponse: Codable {
     }
 }
 
-
-let samplers_k_diffusion = [
-    SamplerIndex.EulerA,
-    SamplerIndex.Euler,
-    SamplerIndex.LMS,
-    SamplerIndex.Heun,
-    SamplerIndex.DPM2,
-    SamplerIndex.DPM2A,
-    SamplerIndex.DPMPP2SA,
-    SamplerIndex.DPMPP2M,
-    SamplerIndex.DPMPPSDE,
-    SamplerIndex.DPMFast,
-    SamplerIndex.DPMAdaptive,
-    SamplerIndex.LMSKarras,
-    SamplerIndex.DPM2Karras,
-    SamplerIndex.DPM2AKarras,
-    SamplerIndex.DPMPP2SAKarras,
-    SamplerIndex.DPMPP2MKarras,
-    SamplerIndex.DPMPPSDEKarras,
-]
 

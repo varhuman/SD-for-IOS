@@ -63,5 +63,28 @@ class Utils: ObservableObject {
         let collection = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: fetchOptions)
         return collection.firstObject
     }
+    
+    static func SaveOutputLogForData(data: Data, fileName:String){
+        guard let utf8String = String(data: data, encoding: .utf8) else {
+            print("Failed to convert data to UTF-8 string.")
+            return
+        }
+        SaveOutputLog(content: utf8String, fileName: fileName)
+    }
+    
+    static func SaveOutputLog(content: String, fileName:String){
+        guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            print("Failed to get the documents directory.")
+            return
+        }
+        
+        let fileURL = documentsDirectory.appendingPathComponent(fileName)
+        do {
+            try content.write(to: fileURL, atomically: true, encoding: .utf8)
+            print("Successfully saved the string to file: \(fileURL.path)")
+        } catch {
+            print("Error writing string to file: \(error)")
+        }
+    }
 
 }

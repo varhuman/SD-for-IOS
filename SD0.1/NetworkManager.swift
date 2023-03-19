@@ -42,7 +42,11 @@ class NetworkManager {
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = try? JSONSerialization.data(withJSONObject: parameters)
-
+        if let jsonSer = try? JSONSerialization.data(withJSONObject: parameters),
+           let body = String(data: jsonSer, encoding: .utf8){
+            print("这是输出的body : \(body)")
+            Utils.SaveOutputLog(content: "\(body)", fileName: "body.json")
+        }
         let task = URLSession.shared.dataTask(with: request, completionHandler: completionHandler)
         task.resume()
     }
@@ -86,7 +90,6 @@ class NetworkManager {
     func sendtxt2ImgRequest(requestParameters: txt2ImgRequestBody,  completion: @escaping (Result<txt2ImgResponse, Error>) -> Void) {
             let parameters = requestParameters.toDictionary()
             let urlString = txt2ImgUrl
-
             postRequest(url: urlString, parameters: parameters) { (data, response, error) in
                 if let error = error {
                     completion(.failure(error))
@@ -99,23 +102,7 @@ class NetworkManager {
                 }
 
                 do {
-                    guard let utf8String = String(data: data, encoding: .utf8) else {
-                        print("Failed to convert data to UTF-8 string.")
-                        return
-                    }
-                    guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-                        print("Failed to get the documents directory.")
-                        return
-                    }
-
-                    let fileName = "output.txt"
-                    let fileURL = documentsDirectory.appendingPathComponent(fileName)
-                    do {
-                        try utf8String.write(to: fileURL, atomically: true, encoding: .utf8)
-                        print("Successfully saved the string to file: \(fileURL.path)")
-                    } catch {
-                        print("Error writing string to file: \(error)")
-                    }
+                    
                     let serverResponse = try JSONDecoder().decode(txt2ImgResponse.self, from: data)
                     completion(.success(serverResponse))
                 } catch {
