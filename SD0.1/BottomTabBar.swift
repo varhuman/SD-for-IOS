@@ -33,7 +33,20 @@ struct BottomTabBar: View {
                     Text("历史")
                 }
                 .tag(2)
+            
+            testForAnyView()
+                .tabItem {
+                    Image(systemName: "4.circle")
+                    Text("Font")
+                }
+                .tag(3)
         }
     }
 }
 
+
+struct BottomTabBar_Previews: PreviewProvider {
+    static var previews: some View {
+        BottomTabBar(selectedTab: .constant(3))
+    }
+}

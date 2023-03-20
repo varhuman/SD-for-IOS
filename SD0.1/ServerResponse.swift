@@ -19,7 +19,7 @@ struct ModelItem: Codable {
     let config: String?
 }
 
-let samplerOptions: [SamplerIndex] = [
+let samplerOptionsEnum: [SamplerIndex] = [
     .EulerA,
     .Euler,
     .LMS,
@@ -38,6 +38,9 @@ let samplerOptions: [SamplerIndex] = [
     .DPMPP2MKarras,
     .DPMPPSDEKarras
 ]
+let samplerOptions: [String] = samplerOptionsEnum.map { $0.rawValue }
+
+
 
 struct OptionsResponse: Codable {
     let sd_model_checkpoint: String
@@ -62,26 +65,6 @@ enum SamplerIndex: String {
     case DPMPP2MKarras = "DPM++ 2M Karras"
     case DPMPPSDEKarras = "DPM++ SDE Karras"
 }
-
-let samplers_k_diffusion = [
-    SamplerIndex.EulerA,
-    SamplerIndex.Euler,
-    SamplerIndex.LMS,
-    SamplerIndex.Heun,
-    SamplerIndex.DPM2,
-    SamplerIndex.DPM2A,
-    SamplerIndex.DPMPP2SA,
-    SamplerIndex.DPMPP2M,
-    SamplerIndex.DPMPPSDE,
-    SamplerIndex.DPMFast,
-    SamplerIndex.DPMAdaptive,
-    SamplerIndex.LMSKarras,
-    SamplerIndex.DPM2Karras,
-    SamplerIndex.DPM2AKarras,
-    SamplerIndex.DPMPP2SAKarras,
-    SamplerIndex.DPMPP2MKarras,
-    SamplerIndex.DPMPPSDEKarras,
-]
 extension SamplerIndex: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()

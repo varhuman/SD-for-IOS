@@ -16,11 +16,10 @@ struct CheckboxToggleStyle: ToggleStyle {
                 configuration.isOn.toggle()
             }) {
                 Image(systemName: configuration.isOn ? "checkmark.square" : "square")
-                    .renderingMode(.template)
-                    .foregroundColor(configuration.isOn ? .accentColor : .primary)
                     .accessibility(label: Text("Checkmark"))
                     .accessibility(removeTraits: .isButton)
             }
+            .buttonStyle(PlainButtonStyle()) // 添加这一行
         }
     }
 }

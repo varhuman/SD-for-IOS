@@ -34,6 +34,10 @@
 		3D32CE5829C7020F00EF6E0F /* CoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE5729C7020F00EF6E0F /* CoreDataUtils.swift */; };
 		3DEBE0CF29C75737004CF958 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 3DEBE0CE29C75737004CF958 /* SwiftUIX */; };
 		3DEBE0D329C75792004CF958 /* NormalContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBE0D229C75792004CF958 /* NormalContainer.swift */; };
+		3DEBE0D729C76538004CF958 /* SomeCustomNormalUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBE0D629C76538004CF958 /* SomeCustomNormalUI.swift */; };
+		3DEBE0DB29C767D6004CF958 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBE0DA29C767D6004CF958 /* UserInputView.swift */; };
+		3DEBE0DF29C81CCF004CF958 /* AppColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBE0DE29C81CCF004CF958 /* AppColorScheme.swift */; };
+		3DEBE0E329C822F7004CF958 /* testForAnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBE0E229C822F7004CF958 /* testForAnyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +85,10 @@
 		3D32CE4D29C6FCB600EF6E0F /* contentViewData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = contentViewData.xcdatamodel; sourceTree = "<group>"; };
 		3D32CE5729C7020F00EF6E0F /* CoreDataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUtils.swift; sourceTree = "<group>"; };
 		3DEBE0D229C75792004CF958 /* NormalContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalContainer.swift; sourceTree = "<group>"; };
+		3DEBE0D629C76538004CF958 /* SomeCustomNormalUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeCustomNormalUI.swift; sourceTree = "<group>"; };
+		3DEBE0DA29C767D6004CF958 /* UserInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
+		3DEBE0DE29C81CCF004CF958 /* AppColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColorScheme.swift; sourceTree = "<group>"; };
+		3DEBE0E229C822F7004CF958 /* testForAnyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testForAnyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +122,10 @@
 		3D32CDEE29C1E87500EF6E0F = {
 			isa = PBXGroup;
 			children = (
+				3DEBE0DE29C81CCF004CF958 /* AppColorScheme.swift */,
 				3DEBE0D229C75792004CF958 /* NormalContainer.swift */,
 				3D32CE5729C7020F00EF6E0F /* CoreDataUtils.swift */,
+				3DEBE0D629C76538004CF958 /* SomeCustomNormalUI.swift */,
 				3D32CE4C29C6FCB600EF6E0F /* contentViewData.xcdatamodeld */,
 				3D32CE4A29C58A5D00EF6E0F /* SwiftUIView.swift */,
 				3D32CE4829C5836D00EF6E0F /* NetworkUtils.swift */,
@@ -139,6 +149,8 @@
 		3D32CDF929C1E87500EF6E0F /* SD0.1 */ = {
 			isa = PBXGroup;
 			children = (
+				3DEBE0E229C822F7004CF958 /* testForAnyView.swift */,
+				3DEBE0DA29C767D6004CF958 /* UserInputView.swift */,
 				3D32CE4429C57A0C00EF6E0F /* ToastView.swift */,
 				3D32CE3429C48CA900EF6E0F /* MainView.swift */,
 				3D32CE3629C48CCC00EF6E0F /* AppData.swift */,
@@ -326,6 +338,7 @@
 			files = (
 				3D32CE2B29C20E1400EF6E0F /* CustomNavigationBar.swift in Sources */,
 				3D32CE2529C1E9C600EF6E0F /* NetworkManager.swift in Sources */,
+				3DEBE0DF29C81CCF004CF958 /* AppColorScheme.swift in Sources */,
 				3DEBE0D329C75792004CF958 /* NormalContainer.swift in Sources */,
 				3D32CE4B29C58A5D00EF6E0F /* SwiftUIView.swift in Sources */,
 				3D32CE2D29C230B700EF6E0F /* AppViewModel.swift in Sources */,
@@ -340,8 +353,11 @@
 				3D32CDFD29C1E87500EF6E0F /* ContentView.swift in Sources */,
 				3D32CE5829C7020F00EF6E0F /* CoreDataUtils.swift in Sources */,
 				3D32CE3329C48BBA00EF6E0F /* HistoryPage.swift in Sources */,
+				3DEBE0E329C822F7004CF958 /* testForAnyView.swift in Sources */,
 				3D32CE2F29C48AC700EF6E0F /* BottomTabBar.swift in Sources */,
+				3DEBE0D729C76538004CF958 /* SomeCustomNormalUI.swift in Sources */,
 				3D32CDFB29C1E87500EF6E0F /* SD0_1App.swift in Sources */,
+				3DEBE0DB29C767D6004CF958 /* UserInputView.swift in Sources */,
 				3D32CE3929C4951F00EF6E0F /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

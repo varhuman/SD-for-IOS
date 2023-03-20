@@ -33,7 +33,7 @@ struct CustomNavigationBar: View {
             }
         }
         .padding()
-        .background(Color(.systemGray6).edgesIgnoringSafeArea(.all))
+        .background(Color(.systemGray6))
     }
 }
 

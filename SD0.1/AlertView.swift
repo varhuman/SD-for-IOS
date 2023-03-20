@@ -25,8 +25,15 @@ struct AlertView: View {
                 .cornerRadius(10)
                 .shadow(radius: 10)
             }
-            .padding(.top, geometry.safeAreaInsets.top)
+//            .padding(.top, geometry.safeAreaInsets.top)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
+    }
+}
+
+
+struct AlertView_Previews: PreviewProvider {
+    static var previews: some View {
+        AlertView(isPresented: .constant(true), title: "123", message: "Font")
     }
 }
