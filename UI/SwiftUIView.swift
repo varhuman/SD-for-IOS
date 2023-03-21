@@ -19,7 +19,7 @@ struct CheckboxToggleStyle: ToggleStyle {
                     .accessibility(label: Text("Checkmark"))
                     .accessibility(removeTraits: .isButton)
             }
-            .buttonStyle(PlainButtonStyle()) // 添加这一行
+            .buttonStyle(PlainButtonStyle()) // 阻止其他UI进行相应点击操作
         }
     }
 }

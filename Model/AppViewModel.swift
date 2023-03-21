@@ -86,14 +86,14 @@ class AppViewModel: ObservableObject {
         saveSettingsSubject
         .debounce(for: .seconds(1), scheduler: DispatchQueue.main) // Adjust the debounce time interval as needed
         .sink {
-            CoreDataUtils.share.saveForContentViewData()
+//            CoreDataUtils.shared.saveForContentViewData()
         }
         .store(in: &cancellables)
         
         saveLoraSetting
             .debounce(for: .seconds(1), scheduler: DispatchQueue.main) // Adjust the debounce time interval as needed
             .sink {
-                CoreDataUtils.share.saveForLoraData()
+//                CoreDataUtils.shared.saveForContentViewData()
             }
             .store(in: &cancellables)
     }

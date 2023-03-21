@@ -35,6 +35,20 @@ class Utils: ObservableObject {
         }
     }
     
+    
+    static func loadSavedImages() -> [URL] {
+        let fileManager = FileManager.default
+        let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+        
+        do {
+            let imageURLs = try fileManager.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil, options: [])
+            return imageURLs.filter { $0.pathExtension == "png" }
+        } catch {
+            print("Error loading images: \(error)")
+        }
+        return []
+    }
+    
     static func saveImageToPhotoLibrary(image: UIImage) {
         let albumName = "Stable Diffusion_ios"
         PHPhotoLibrary.shared().performChanges({
@@ -56,6 +70,17 @@ class Utils: ObservableObject {
             }
         })
     }
+    
+    //compressionQuality -> 0.0 - 1.0 worst - best
+    static func compressBase64Image(image: UIImage, compressionQuality: CGFloat) -> String? {
+        // 压缩图片
+        guard let compressedImageData = image.jpegData(compressionQuality: compressionQuality) else { return nil }
+        
+        // 将压缩后的Data编码为Base64字符串
+        let compressedBase64 = compressedImageData.base64EncodedString()
+        return compressedBase64
+    }
+
     
     static func fetchAssetCollectionForAlbum(albumName: String) -> PHAssetCollection? {
         let fetchOptions = PHFetchOptions()

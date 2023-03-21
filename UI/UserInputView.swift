@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UserInputView: View {
     var widthHeightOptions = [512, 768, 320, 460]
+    var batchCountOptions = [1,2,3,4,5]
     @ObservedObject var viewModel = AppViewModel.viewModel
     var body: some View {
         List{
@@ -39,34 +40,11 @@ struct UserInputView: View {
                 
                 // Prompt 标签和输入框
                 Section(header: SectionImageHeader(symbolName: "key", title: "关键字")){
-                    HStack {
-                        Text("正向")
-                            .frame(width: 100, alignment: .leading)
-                        Spacer()
-                        TextEditor(text: $viewModel.promptTextInput)
-                            .border(Color.gray, width: 1)
-//                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                            .frame(height: 80, alignment: .leading)
+                    VStack{
+                        GeometryTextEditor(title: "正向", textFieldValue: $viewModel.promptTextInput)
+
+                        GeometryTextEditor(title: "反向", textFieldValue: $viewModel.negativeTextInput)
                     }
-                    HStack {
-                        Text("反向")
-                            .frame(width: 100, alignment: .leading)
-                        Spacer()
-                        TextEditor(text: $viewModel.negativeTextInput)
-                            .frame(height: 80, alignment: .leading)
-                            .border(Color.gray, width: 1)
-//                            .cornerRadius(20)
-                    }
-                }
-                
-                // Negative Prompt 标签和输入框
-                Section(header: SectionImageHeader(symbolName: "number.circle.fill", title: "生成数量")) {
-                    Picker("", selection: $viewModel.batch_size) {
-                        ForEach(1...5, id: \.self) { number in
-                            Text("\(number)")
-                        }
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
                 }
             }
             Group{
@@ -76,6 +54,10 @@ struct UserInputView: View {
                     HStackToggle(title: "面部修复", isOn: $viewModel.faceRestore)
                     HStackPicker(title: "Width", textFieldValue: $viewModel.width, Options: widthHeightOptions)
                     HStackPicker(title: "Height", textFieldValue: $viewModel.height, Options: widthHeightOptions)
+                    HStack{
+                        Image(systemName: "number.circle.fill")
+                        HStackPicker(title: "生成数量", textFieldValue: $viewModel.batch_size, Options: batchCountOptions)
+                    }
                 }
             }
             Section(header: "Addition Network")

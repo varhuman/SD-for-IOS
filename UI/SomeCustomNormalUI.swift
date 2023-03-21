@@ -24,6 +24,32 @@ struct HStackTextField: View {
     }
 }
 
+struct GeometryTextEditor: View {
+    var title = ""
+    @Binding var textFieldValue: String
+    
+    var body: some View {
+        GeometryReader { geometry in
+            VStack{
+                HStack{
+                    Text(title)
+                        .frame(width: 100, alignment: .leading)
+                    Spacer()
+                    TextEditor(text: $textFieldValue)
+                        .frame(minHeight: geometry.size.height)
+                        .padding(4)
+                        .background(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
+                        .padding()
+                }
+            }
+            .frame(minHeight: geometry.size.height)
+        }
+        .frame(height: 100) // 设置最小高度
+        .padding()
+    }
+}
+
+
 struct HStackPicker: View {
     var title: String
     @Binding var textFieldValue: Int

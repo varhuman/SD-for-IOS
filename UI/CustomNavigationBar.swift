@@ -15,7 +15,7 @@ struct CustomNavigationBar: View {
         HStack {
             Spacer()
 
-            Text("软件名")
+            Text(AppData.appName)
                 .font(.title2)
                 .bold()
                 
@@ -28,7 +28,7 @@ struct CustomNavigationBar: View {
                     Image(systemName: "exclamationmark.circle")
                 }
                 .alert(isPresented: $showAlert) {
-                    Alert(title: Text("版本信息"), message: Text("v.1"), dismissButton: .default(Text("知道了")))
+                    Alert(title: Text("版本信息"), message: Text(AppData.appVersion), dismissButton: .default(Text("知道了")))
                 }
             }
         }

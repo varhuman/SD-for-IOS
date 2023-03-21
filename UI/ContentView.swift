@@ -42,6 +42,9 @@ struct ContentView: View {
     @State private var showToast = false
     @State private var showToastMessage = "false"
     
+    @State private var showTemplateView = false
+    @State private var showCommitHistoryView = false
+    
     
     init(selectedTab: Binding<Int>) {
         _selectedTab = selectedTab
@@ -92,6 +95,29 @@ struct ContentView: View {
                                     .cornerRadius(10)
                             }
                             .padding()
+                            
+                            Button(action: {
+                                withAnimation {
+                                    showTemplateView = true
+                                }
+                            }) {
+                                Text("Template")
+                                    .padding()
+                                    .background(Color.blue)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                            }
+                            
+                            Button(action: {
+                                showCommitHistoryView.toggle()
+                            }) {
+                                Text("Open Sub View")
+                                    .padding()
+                                    .background(Color.blue)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                            }
+                            .background(NavigationLink("", destination: CommitHistoryPage(showCommitHistoryView: $showCommitHistoryView), isActive: $showCommitHistoryView).opacity(0))
                         }
                     }
                 }
@@ -102,6 +128,16 @@ struct ContentView: View {
                 })
                 if isSubmitting {
                     loadingOverlay
+                }
+                if showTemplateView {
+                    Color.black.opacity(0.5)
+                        .edgesIgnoringSafeArea(.all)
+                        .onTapGesture {
+                            withAnimation {
+                                showTemplateView = false
+                            }
+                        }
+                    TemplateModelView(showView: $showTemplateView)
                 }
             }
             .onAppear {
@@ -129,7 +165,7 @@ struct ContentView: View {
                                             isLoading = false
                                             showToast = true
                                             showToastMessage = message
-                                            CoreDataUtils.share.loadSettingsContentViewData()
+                                            CoreDataUtils.shared.loadSettingsContentViewData()
                                         }
                                     }
                                 }
@@ -146,7 +182,7 @@ struct ContentView: View {
     private func testSave() {
 //        CoreDataUtils.share.deleteAllData(of:"ContentViewUserData")
 //        CoreDataUtils.share.deleteAllData(of:"LoraUIData")
-        CoreDataUtils.share.loadSettingsContentViewData()
+        CoreDataUtils.shared.loadSettingsContentViewData()
     }
     private func submit() {
         isSubmitting = true
@@ -195,6 +231,7 @@ struct ContentView: View {
                     showToast = true
                     isSubmitting = false
                     selectedTab = 1
+                    CoreDataUtils.shared.saveForSubmit(image: savedImages.first)
                 case .failure(let error):
                     // 在此处处理错误，例如显示错误消息
                     showAlertAfterSubmit = true

@@ -30,14 +30,18 @@
 		3D32CE4529C57A0D00EF6E0F /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE4429C57A0C00EF6E0F /* ToastView.swift */; };
 		3D32CE4929C5836D00EF6E0F /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE4829C5836D00EF6E0F /* NetworkUtils.swift */; };
 		3D32CE4B29C58A5D00EF6E0F /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE4A29C58A5D00EF6E0F /* SwiftUIView.swift */; };
-		3D32CE4E29C6FCB600EF6E0F /* contentViewData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE4C29C6FCB600EF6E0F /* contentViewData.xcdatamodeld */; };
 		3D32CE5829C7020F00EF6E0F /* CoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32CE5729C7020F00EF6E0F /* CoreDataUtils.swift */; };
+		3DD7C97C29C882D4001C8370 /* contentViewData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DD7C97729C87305001C8370 /* contentViewData.xcdatamodeld */; };
+		3DD7C97D29C882D4001C8370 /* contentViewData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DD7C97729C87305001C8370 /* contentViewData.xcdatamodeld */; };
+		3DD7C97E29C882D5001C8370 /* contentViewData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DD7C97729C87305001C8370 /* contentViewData.xcdatamodeld */; };
 		3DEBE0CF29C75737004CF958 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 3DEBE0CE29C75737004CF958 /* SwiftUIX */; };
 		3DEBE0D329C75792004CF958 /* NormalContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBE0D229C75792004CF958 /* NormalContainer.swift */; };
 		3DEBE0D729C76538004CF958 /* SomeCustomNormalUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBE0D629C76538004CF958 /* SomeCustomNormalUI.swift */; };
 		3DEBE0DB29C767D6004CF958 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBE0DA29C767D6004CF958 /* UserInputView.swift */; };
 		3DEBE0DF29C81CCF004CF958 /* AppColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBE0DE29C81CCF004CF958 /* AppColorScheme.swift */; };
 		3DEBE0E329C822F7004CF958 /* testForAnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBE0E229C822F7004CF958 /* testForAnyView.swift */; };
+		3DEBE0E529C846C8004CF958 /* TemplateModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBE0E429C846C8004CF958 /* TemplateModelView.swift */; };
+		3DEBE0E729C8624A004CF958 /* CommitHistoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBE0E629C8624A004CF958 /* CommitHistoryPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,13 +86,15 @@
 		3D32CE4429C57A0C00EF6E0F /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		3D32CE4829C5836D00EF6E0F /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		3D32CE4A29C58A5D00EF6E0F /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
-		3D32CE4D29C6FCB600EF6E0F /* contentViewData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = contentViewData.xcdatamodel; sourceTree = "<group>"; };
 		3D32CE5729C7020F00EF6E0F /* CoreDataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUtils.swift; sourceTree = "<group>"; };
+		3DD7C97829C87305001C8370 /* contentViewData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = contentViewData.xcdatamodel; sourceTree = "<group>"; };
 		3DEBE0D229C75792004CF958 /* NormalContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalContainer.swift; sourceTree = "<group>"; };
 		3DEBE0D629C76538004CF958 /* SomeCustomNormalUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeCustomNormalUI.swift; sourceTree = "<group>"; };
 		3DEBE0DA29C767D6004CF958 /* UserInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
 		3DEBE0DE29C81CCF004CF958 /* AppColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColorScheme.swift; sourceTree = "<group>"; };
 		3DEBE0E229C822F7004CF958 /* testForAnyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testForAnyView.swift; sourceTree = "<group>"; };
+		3DEBE0E429C846C8004CF958 /* TemplateModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModelView.swift; sourceTree = "<group>"; };
+		3DEBE0E629C8624A004CF958 /* CommitHistoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitHistoryPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,13 +128,11 @@
 		3D32CDEE29C1E87500EF6E0F = {
 			isa = PBXGroup;
 			children = (
-				3DEBE0DE29C81CCF004CF958 /* AppColorScheme.swift */,
-				3DEBE0D229C75792004CF958 /* NormalContainer.swift */,
-				3D32CE5729C7020F00EF6E0F /* CoreDataUtils.swift */,
-				3DEBE0D629C76538004CF958 /* SomeCustomNormalUI.swift */,
-				3D32CE4C29C6FCB600EF6E0F /* contentViewData.xcdatamodeld */,
-				3D32CE4A29C58A5D00EF6E0F /* SwiftUIView.swift */,
-				3D32CE4829C5836D00EF6E0F /* NetworkUtils.swift */,
+				3DD7C97629C872EC001C8370 /* Controller */,
+				3DD7C97529C872AE001C8370 /* Model */,
+				3DD7C97429C8727B001C8370 /* UI */,
+				3D32CDFE29C1E87500EF6E0F /* Assets.xcassets */,
+				3D32CE0029C1E87500EF6E0F /* Preview Content */,
 				3D32CDF929C1E87500EF6E0F /* SD0.1 */,
 				3D32CE0A29C1E87600EF6E0F /* SD0.1Tests */,
 				3D32CE1429C1E87600EF6E0F /* SD0.1UITests */,
@@ -149,24 +153,6 @@
 		3D32CDF929C1E87500EF6E0F /* SD0.1 */ = {
 			isa = PBXGroup;
 			children = (
-				3DEBE0E229C822F7004CF958 /* testForAnyView.swift */,
-				3DEBE0DA29C767D6004CF958 /* UserInputView.swift */,
-				3D32CE4429C57A0C00EF6E0F /* ToastView.swift */,
-				3D32CE3429C48CA900EF6E0F /* MainView.swift */,
-				3D32CE3629C48CCC00EF6E0F /* AppData.swift */,
-				3D32CE2E29C48AC700EF6E0F /* BottomTabBar.swift */,
-				3D32CE3229C48BBA00EF6E0F /* HistoryPage.swift */,
-				3D32CE2C29C230B700EF6E0F /* AppViewModel.swift */,
-				3D32CE2A29C20E1400EF6E0F /* CustomNavigationBar.swift */,
-				3D32CE2829C1FCD900EF6E0F /* ResultPage.swift */,
-				3D32CE2629C1FC7900EF6E0F /* AlertView.swift */,
-				3D32CDFA29C1E87500EF6E0F /* SD0_1App.swift */,
-				3D32CDFC29C1E87500EF6E0F /* ContentView.swift */,
-				3D32CE3A29C4962200EF6E0F /* ServerResponse.swift */,
-				3D32CE3829C4951F00EF6E0F /* Utils.swift */,
-				3D32CDFE29C1E87500EF6E0F /* Assets.xcassets */,
-				3D32CE0029C1E87500EF6E0F /* Preview Content */,
-				3D32CE2429C1E9C600EF6E0F /* NetworkManager.swift */,
 			);
 			path = SD0.1;
 			sourceTree = "<group>";
@@ -194,6 +180,52 @@
 				3D32CE1729C1E87600EF6E0F /* SD0_1UITestsLaunchTests.swift */,
 			);
 			path = SD0.1UITests;
+			sourceTree = "<group>";
+		};
+		3DD7C97429C8727B001C8370 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3D32CDFA29C1E87500EF6E0F /* SD0_1App.swift */,
+				3DEBE0D229C75792004CF958 /* NormalContainer.swift */,
+				3D32CE4A29C58A5D00EF6E0F /* SwiftUIView.swift */,
+				3DEBE0E229C822F7004CF958 /* testForAnyView.swift */,
+				3DEBE0DA29C767D6004CF958 /* UserInputView.swift */,
+				3D32CE4429C57A0C00EF6E0F /* ToastView.swift */,
+				3D32CE3229C48BBA00EF6E0F /* HistoryPage.swift */,
+				3D32CE3429C48CA900EF6E0F /* MainView.swift */,
+				3D32CE2A29C20E1400EF6E0F /* CustomNavigationBar.swift */,
+				3D32CE2829C1FCD900EF6E0F /* ResultPage.swift */,
+				3D32CE2629C1FC7900EF6E0F /* AlertView.swift */,
+				3D32CDFC29C1E87500EF6E0F /* ContentView.swift */,
+				3DEBE0E629C8624A004CF958 /* CommitHistoryPage.swift */,
+				3DEBE0D629C76538004CF958 /* SomeCustomNormalUI.swift */,
+				3D32CE2E29C48AC700EF6E0F /* BottomTabBar.swift */,
+				3DEBE0E429C846C8004CF958 /* TemplateModelView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3DD7C97529C872AE001C8370 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DEBE0DE29C81CCF004CF958 /* AppColorScheme.swift */,
+				3D32CE3629C48CCC00EF6E0F /* AppData.swift */,
+				3D32CE2C29C230B700EF6E0F /* AppViewModel.swift */,
+				3D32CE3A29C4962200EF6E0F /* ServerResponse.swift */,
+				3DD7C97729C87305001C8370 /* contentViewData.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3DD7C97629C872EC001C8370 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3D32CE5729C7020F00EF6E0F /* CoreDataUtils.swift */,
+				3D32CE4829C5836D00EF6E0F /* NetworkUtils.swift */,
+				3D32CE3829C4951F00EF6E0F /* Utils.swift */,
+				3D32CE2429C1E9C600EF6E0F /* NetworkManager.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,14 +374,16 @@
 				3DEBE0D329C75792004CF958 /* NormalContainer.swift in Sources */,
 				3D32CE4B29C58A5D00EF6E0F /* SwiftUIView.swift in Sources */,
 				3D32CE2D29C230B700EF6E0F /* AppViewModel.swift in Sources */,
-				3D32CE4E29C6FCB600EF6E0F /* contentViewData.xcdatamodeld in Sources */,
 				3D32CE3B29C4962200EF6E0F /* ServerResponse.swift in Sources */,
 				3D32CE4529C57A0D00EF6E0F /* ToastView.swift in Sources */,
 				3D32CE4929C5836D00EF6E0F /* NetworkUtils.swift in Sources */,
+				3DEBE0E529C846C8004CF958 /* TemplateModelView.swift in Sources */,
 				3D32CE3529C48CA900EF6E0F /* MainView.swift in Sources */,
 				3D32CE3729C48CCC00EF6E0F /* AppData.swift in Sources */,
 				3D32CE2729C1FC7900EF6E0F /* AlertView.swift in Sources */,
 				3D32CE2929C1FCD900EF6E0F /* ResultPage.swift in Sources */,
+				3DEBE0E729C8624A004CF958 /* CommitHistoryPage.swift in Sources */,
+				3DD7C97C29C882D4001C8370 /* contentViewData.xcdatamodeld in Sources */,
 				3D32CDFD29C1E87500EF6E0F /* ContentView.swift in Sources */,
 				3D32CE5829C7020F00EF6E0F /* CoreDataUtils.swift in Sources */,
 				3D32CE3329C48BBA00EF6E0F /* HistoryPage.swift in Sources */,
@@ -366,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DD7C97D29C882D4001C8370 /* contentViewData.xcdatamodeld in Sources */,
 				3D32CE0C29C1E87600EF6E0F /* SD0_1Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D32CE1829C1E87600EF6E0F /* SD0_1UITestsLaunchTests.swift in Sources */,
+				3DD7C97E29C882D5001C8370 /* contentViewData.xcdatamodeld in Sources */,
 				3D32CE1629C1E87600EF6E0F /* SD0_1UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,7 +552,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SD0.1/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = NY895LXZ8G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -546,7 +582,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SD0.1/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = NY895LXZ8G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -732,14 +768,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		3D32CE4C29C6FCB600EF6E0F /* contentViewData.xcdatamodeld */ = {
+		3DD7C97729C87305001C8370 /* contentViewData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3D32CE4D29C6FCB600EF6E0F /* contentViewData.xcdatamodel */,
+				3DD7C97829C87305001C8370 /* contentViewData.xcdatamodel */,
 			);
-			currentVersion = 3D32CE4D29C6FCB600EF6E0F /* contentViewData.xcdatamodel */;
-			name = contentViewData.xcdatamodeld;
-			path = "../../../../Library/Developer/Xcode/DerivedData/SD0.1-eyqxwucyyydfukbxqeuuktwhqfrv/SourcePackages/checkouts/AnyCodable/contentViewData.xcdatamodeld";
+			currentVersion = 3DD7C97829C87305001C8370 /* contentViewData.xcdatamodel */;
+			path = contentViewData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
